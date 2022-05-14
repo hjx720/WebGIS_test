@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebGIS 2022 Simeon Zeyse</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <img id="logo" src="images/webgis.png">
+      <button onclick="infoCloseAll()"><i class="fa-solid fa-house"></i></button>
+      <button onclick="info('baselayer')"><i class="fa-solid fa-map"></i></button>
+      <button onclick="info('coordinates')"><i class="fa-solid fa-circle-info"></i></button>
+    </div>
+
+    <div id="baselayer" class="infobar"></div>
+
+    <div id="coordinates" class="infobar">
+      <h1>Koordinaten</h1>
+      <table class="coords">
+        <tr>
+          <td>WGS 84:</td>
+          <td></td>
+          <td id="mouseCoord4326"></td>
+        </tr>
+      </table>
+    </div>
+    <div id="main" class="main">
+      <div id="map" class="map"></div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
